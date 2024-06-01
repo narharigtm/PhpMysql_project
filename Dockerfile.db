@@ -1,0 +1,3 @@
+FROM mysql:8.1-oracle
+MAINTAINER narhari
+ADD crdb.sql /docker-entrypoint-initdb.d

@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8020:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql100
+    ports:
+      - "3306:3306"
+   
+
