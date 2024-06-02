@@ -35,6 +35,7 @@ pipeline {
             echo 'Pipeline failed!'
            }
         }
+      }
     }      
 
     
