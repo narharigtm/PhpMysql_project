@@ -13,13 +13,7 @@ pipeline {
                 sh 'sudo docker images'
             }
         }
-        stage('push'){
-            steps{
-                withDockerRegistry(credentialsId: 'narharigtm', url: 'https://github.com/narharigtm/PhpMysql_project.git')               
-                sh 'sudo docker tag phpmysqlimg narhari/phpmysqlimg:V1'
-                sh 'sudo docker push narhari/phpmysqlimg:V1'
-            }
-        }
+
          stage('run'){
             steps{
                 sh 'sudo docker-compose up -d'
