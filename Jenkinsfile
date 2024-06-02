@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh 'sudo docker-compose build'
                 sh 'sudo docker images'
+                sh 'sudo docker ps'
             }
         }
 
