@@ -14,13 +14,7 @@ pipeline {
             }
         }
 
-        stage('Run') {
-            steps {
-                sh 'sudo docker-compose up -d'
-                sh 'sudo docker ps'
-            }
         }
-    }
 
     post {
         success {
