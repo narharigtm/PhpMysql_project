@@ -28,7 +28,11 @@ pipeline {
         }   
     
     post {
-        sh 'sudo docker-compose down'
+        success {
+            echo 'Pipeline succeeded!'
+        }
+        failure {
+            echo 'Pipeline failed!'
     }
         
 }
