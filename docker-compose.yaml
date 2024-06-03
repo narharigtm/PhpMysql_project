@@ -17,6 +17,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: mysql100
     ports:
-      - "3306:3306"
+      - "3302:3306"
    
 
