@@ -9,19 +9,19 @@ pipeline {
         }
         stage('build & run'){
             steps{
-                sh 'sudo docker-compose up -d'
-                sh 'sudo docker ps'
+                sh 'docker-compose up -d'
+                sh 'docker ps'
             }
         }
     }
     post {
         success {
             echo 'Pipeline succeeded!'
-            sh 'sudo docker-compose down'
+            sh 'docker-compose down'
         }
         failure {
             echo 'Pipeline failed!'
-            sh 'sudo docker-compose down'
+            sh 'docker-compose down'
         }
     }
 }
